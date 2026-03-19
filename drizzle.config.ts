@@ -1,12 +1,10 @@
-import { defineConfig } from "drizzle-kit";
-
-import { config } from "./src/config";
+import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
-  out: "./src/db/migrations",
-  schema: "./src/db/schema.ts",
-  dialect: "turso",
+  schema: './src/db/schema.ts',
+  out: './drizzle',
+  driver: 'turso',
   dbCredentials: {
-    url: config.db.url || "",
+    url: process.env.DATABASE_URL!,
   },
 });
