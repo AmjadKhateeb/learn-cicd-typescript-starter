@@ -4,3 +4,4 @@ dist/
 .env
 .vscode
 cloud-run-key.json
+.env
